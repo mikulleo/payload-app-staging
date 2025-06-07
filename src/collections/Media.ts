@@ -17,10 +17,10 @@ const dirname = path.dirname(filename)
 export const Media: CollectionConfig = {
   slug: 'media',
   access: {
-    create: authenticated,
-    delete: authenticated,
-    read: anyone,
-    update: authenticated,
+    read: () => true,
+    update: () => true,
+    create: () => true,
+    delete: () => true,
   },
   fields: [
     {
@@ -47,14 +47,14 @@ export const Media: CollectionConfig = {
           pickerAppearance: 'dayAndTime',
         },
       },
-    }
+    },
   ],
   upload: {
     // Upload to the public/media directory in Next.js making them publicly accessible even outside of Payload
     staticDir: path.resolve(dirname, '../../public/media'),
     adminThumbnail: 'thumbnail',
     focalPoint: true,
-    mimeTypes: ['image/*', 'application/pdf'], 
+    mimeTypes: ['image/*', 'application/pdf'],
     imageSizes: [
       {
         name: 'thumbnail',
