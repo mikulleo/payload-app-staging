@@ -55,7 +55,7 @@ export default buildConfig({
     },
     user: Users.slug,
     livePreview: {
-      url: 'https://koblich-chronicles-be-production.up.railway.app',
+      url: 'https://koblich-chronicles-be-test.up.railway.app/',
       collections: ['pages', 'trades', 'media'],
       breakpoints: [
         {
