@@ -73,6 +73,11 @@ export const Charts: CollectionConfig = {
       admin: {
         description: 'Upload a stock chart screenshot',
       },
+      access: {
+        read: () => true,
+        update: () => true,
+        create: () => true,
+      },
     },
     {
       name: 'ticker',
@@ -259,6 +264,11 @@ export const Charts: CollectionConfig = {
       relationTo: 'media',
       admin: {
         description: 'Annotated version of this chart (if available)',
+      },
+      access: {
+        read: () => true,
+        update: () => true,
+        create: () => true,
       },
     },
     {
